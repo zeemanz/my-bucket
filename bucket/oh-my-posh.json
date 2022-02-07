@@ -1,0 +1,36 @@
+{
+  "version": "7.12.0",
+  "description": "A prompt theme engine for any shell",
+  "homepage": "https://ohmyposh.dev",
+  "license": {
+    "identifier": "GPL-3.0-only",
+    "url": "https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/COPYING"
+  },
+  "notes": [
+    "To replace your existing prompt, dont't forget to add this to $PROFILE:",
+    "",
+    "oh-my-posh -init -shell pwsh -config \"$(scoop prefix oh-my-posh)\\themes\\<theme>.omp.json\" | Invoke-Expression",
+    "",
+    "Have a look at https://ohmyposh.dev for detailed instructions."
+  ],
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v7.12.0/posh-windows-amd64.7z",
+      "hash": "795868DEFF6B67B78C5466FDF59A4D2423E84DD11C747C86C868CE5B801A6BE8"
+    }
+  },
+  "bin": "bin\\oh-my-posh.exe",
+  "checkver": {
+    "github": "https://github.com/JanDeDobbeleer/oh-my-posh"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v$version/posh-windows-amd64.7z"
+      }
+    },
+    "hash": {
+      "url": "$url.sha256"
+    }
+  }
+}
