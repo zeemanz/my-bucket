@@ -1,0 +1,45 @@
+{
+  "version": "1.17.1",
+  "description": "A music app based on electron and vue",
+  "homepage": "https://github.com/lyswhut/lx-music-desktop",
+  "license": {
+    "identifier": "Apache-2.0",
+    "url": "https://github.com/lyswhut/lx-music-desktop/blob/master/LICENSE"
+  },
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v1.17.1/lx-music-desktop-v1.17.1-win_x64-green.7z",
+      "hash": "96A62AD873A095DDF4AD6AE8485074A06307ACE18C406892A7A8A789A64DB365"
+    },
+    "32bit": {
+      "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v1.17.1/lx-music-desktop-v1.17.1-win_x86-green.7z",
+      "hash": "2A2342BD8D8CEE76A57B1F5EC1BBCFB2E9A6589F93253E621A1723A03421C909"
+    }
+  },
+  "pre_install": [
+    "New-Item $dir\\portable -ItemType Directory -ErrorAction SilentlyContinue | Out-Null"
+  ],
+  "shortcuts": [
+    [
+      "lx-music-desktop.exe",
+      "LX Music"
+    ]
+  ],
+  "persist": [
+    [
+      "portable\\userData",
+      "userData"
+    ]
+  ],
+  "checkver": "github",
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v$version/lx-music-desktop-v$version-win_x64-green.7z"
+      },
+      "32bit": {
+        "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v$version/lx-music-desktop-v$version-win_x86-green.7z"
+      }
+    }
+  }
+}
