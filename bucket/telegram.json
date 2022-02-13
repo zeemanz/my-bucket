@@ -1,40 +1,40 @@
 {
-  "version": "3.5.1",
-  "description": "A messaging app with a focus on speed and security",
-  "homepage": "https://telegram.org",
-  "license": {
-    "identifier": "GPL-3.0-only",
-    "url": "https://github.com/telegramdesktop/tdesktop/blob/dev/LICENSE"
-  },
-  "architecture": {
-    "64bit": {
-      "url": "https://updates.tdesktop.com/tx64/tportable-x64.3.5.1.zip",
-      "hash": "53F897124CC42E3A445C65E3784726948ECA7158C4DD2B3E16D25348D367846A"
+    "version": "3.5.1",
+    "description": "A messaging app with a focus on speed and security",
+    "homepage": "https://telegram.org",
+    "license": {
+        "identifier": "GPL-3.0-only",
+        "url": "https://github.com/telegramdesktop/tdesktop/blob/dev/LICENSE"
     },
-    "32bit": {
-      "url": "https://updates.tdesktop.com/tsetup/tportable.3.5.1.zip",
-      "hash": "2FEA5D8ECFC031693D889268C02917CFBD75903738EA8CE7EA64B4DA4C8834FE"
-    }
-  },
-  "extract_dir": "Telegram",
-  "shortcuts": [
-    [
-      "Telegram.exe",
-      "Telegram"
-    ]
-  ],
-  "persist": "tdata",
-  "checkver": {
-    "github": "https://github.com/telegramdesktop/tdesktop"
-  },
-  "autoupdate": {
     "architecture": {
-      "64bit": {
-        "url": "https://updates.tdesktop.com/tx64/tportable-x64.$version.zip"
-      },
-      "32bit": {
-        "url": "https://updates.tdesktop.com/tsetup/tportable.$version.zip"
-      }
+        "64bit": {
+            "url": "https://updates.tdesktop.com/tx64/tportable-x64.3.5.1.zip",
+            "hash": "53F897124CC42E3A445C65E3784726948ECA7158C4DD2B3E16D25348D367846A"
+        },
+        "32bit": {
+            "url": "https://updates.tdesktop.com/tsetup/tportable.3.5.1.zip",
+            "hash": "2FEA5D8ECFC031693D889268C02917CFBD75903738EA8CE7EA64B4DA4C8834FE"
+        }
+    },
+    "extract_dir": "Telegram",
+    "shortcuts": [
+        [
+            "Telegram.exe",
+            "Telegram"
+        ]
+    ],
+    "persist": "tdata",
+    "checkver": {
+        "github": "https://github.com/telegramdesktop/tdesktop"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://updates.tdesktop.com/tx64/tportable-x64.$version.zip"
+            },
+            "32bit": {
+                "url": "https://updates.tdesktop.com/tsetup/tportable.$version.zip"
+            }
+        }
     }
-  }
 }

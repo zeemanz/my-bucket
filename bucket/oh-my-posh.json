@@ -1,34 +1,34 @@
 {
-  "version": "7.17.0",
-  "description": "A prompt theme engine for any shell",
-  "homepage": "https://ohmyposh.dev",
-  "license": {
-    "identifier": "GPL-3.0-only",
-    "url": "https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/COPYING"
-  },
-  "notes": [
-    "To replace your existing prompt, dont't forget to add this to $PROFILE:",
-    "",
-    "oh-my-posh -init -shell pwsh -config \"$(scoop prefix oh-my-posh)\\themes\\<theme>.omp.json\" | Invoke-Expression",
-    "",
-    "Have a look at https://ohmyposh.dev for detailed instructions."
-  ],
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v7.17.0/posh-windows-amd64.7z",
-      "hash": "B5966193A8A0D6B933896015C11F1F43FA090719BB3E0A1CEA4A12294115EC54"
-    }
-  },
-  "bin": "bin\\oh-my-posh.exe",
-  "checkver": {
-    "github": "https://github.com/JanDeDobbeleer/oh-my-posh"
-  },
-  "autoupdate": {
+    "version": "7.17.0",
+    "description": "A prompt theme engine for any shell",
+    "homepage": "https://ohmyposh.dev",
+    "license": {
+        "identifier": "GPL-3.0-only",
+        "url": "https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/COPYING"
+    },
+    "notes": [
+        "To replace your existing prompt, dont't forget to add this to $PROFILE:",
+        "",
+        "oh-my-posh -init -shell pwsh -config \"$(scoop prefix oh-my-posh)\\themes\\<theme>.omp.json\" | Invoke-Expression",
+        "",
+        "Have a look at https://ohmyposh.dev for detailed instructions."
+    ],
     "architecture": {
-      "64bit": {
-        "url": "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v$version/posh-windows-amd64.7z",
-        "hash": "$url.sha256"
-      }
+        "64bit": {
+            "url": "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v7.17.0/posh-windows-amd64.7z",
+            "hash": "B5966193A8A0D6B933896015C11F1F43FA090719BB3E0A1CEA4A12294115EC54"
+        }
+    },
+    "bin": "bin\\oh-my-posh.exe",
+    "checkver": {
+        "github": "https://github.com/JanDeDobbeleer/oh-my-posh"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v$version/posh-windows-amd64.7z",
+                "hash": "$url.sha256"
+            }
+        }
     }
-  }
 }
