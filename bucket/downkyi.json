@@ -1,0 +1,27 @@
+{
+  "version": "1.4.0",
+  "description": "A video downloader for bilibili",
+  "homepage": "https://github.com/leiurayer/downkyi",
+  "license": {
+    "identifier": "Apache-2.0",
+    "url": "https://github.com/leiurayer/downkyi/blob/main/LICENSE"
+  },
+  "notes": [
+    "If you cannot run this app, please install .NET Framework 4.7.2 or above."
+  ],
+  "url": "https://github.com/leiurayer/downkyi/releases/download/v1.4.0/DownKyi-1.4.0.zip",
+  "hash": "4EE517D175FC594856F6775CF694AB033B5E8C2CA82EC5D114F6C6FD44B165E8",
+  "shortcuts": [
+    [
+      "DownKyi.exe",
+      "DownKyi"
+    ]
+  ],
+  "persist": [
+    "Config"
+  ],
+  "checkver": "github",
+  "autoupdate": {
+    "url": "https://github.com/leiurayer/downkyi/releases/download/v$version/DownKyi-$version.zip"
+  }
+}
