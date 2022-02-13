@@ -27,7 +27,9 @@
         "architecture": {
             "64bit": {
                 "url": "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v$version/posh-windows-amd64.7z",
-                "hash": "$url.sha256"
+                "hash": {
+                    "url": "$url.sha256"
+                }
             }
         }
     }
