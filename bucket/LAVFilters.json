@@ -1,0 +1,65 @@
+{
+    "version": "0.76",
+    "description": "FFmpeg based DirectShow splitter and decoders",
+    "homepage": "https://github.com/Nevcairiel/LAVFilters",
+    "license": {
+        "identifier": "GPL-2.0-only",
+        "url": "https://github.com/Nevcairiel/LAVFilters/blob/master/COPYING"
+    },
+    "notes": [
+        "Please do not move or delete this app manually!",
+        "If you want to reset the settings, you can just delete the item \"LAV\" at \"HKCU\\Software\" in the registry."
+    ],
+    "depends": "sudo",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Nevcairiel/LAVFilters/releases/download/0.76/LAVFilters-0.76-x64.zip",
+            "hash": "9ad894a76c0b0d414b9917c74112b2dbc0719e33307ed249fb03a87a20b08e43"
+        },
+        "32bit": {
+            "url": "https://github.com/Nevcairiel/LAVFilters/releases/download/0.76/LAVFilters-0.76-x86.zip",
+            "hash": "aec3ea7d8b48b21449fa1e6f1c3550ca574851038fd3bd310da5bb9f06711af8"
+        }
+    },
+    "pre_install": [
+        "Get-ChildItem -Path $dir -Filter *install_*.bat | ForEach-Object {",
+        "    $content = (Get-Content -Path $_).Replace(\"regsvr32.exe\", \"regsvr32.exe /s\")",
+        "    Set-Content -Path $_ -Value $content",
+        "}"
+    ],
+    "installer": {
+        "script": [
+            "$installer = \"$dir\\installer.bat\"",
+            "$content = Get-ChildItem -Path $dir -Filter install_*.bat | ForEach-Object {",
+            "    \"call `\"$_`\"\"",
+            "}",
+            "$content = (, \"@echo off\") + $content",
+            "Set-Content -Path $installer -Value $content",
+            "sudo $installer",
+            "Remove-Item -Path $installer -Force -ErrorAction SilentlyContinue"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "$uninstaller = \"$dir\\uninstaller.bat\"",
+            "$content = Get-ChildItem -Path $dir -Filter uninstall_*.bat | ForEach-Object {",
+            "    \"call `\"$_`\"\"",
+            "}",
+            "$content = (, \"@echo off\") + $content",
+            "Set-Content -Path $uninstaller -Value $content",
+            "sudo $uninstaller",
+            "Remove-Item -Path $uninstaller -Force -ErrorAction SilentlyContinue"
+        ]
+    },
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Nevcairiel/LAVFilters/releases/download/$version/LAVFilters-$version-x64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/Nevcairiel/LAVFilters/releases/download/$version/LAVFilters-$version-x86.zip"
+            }
+        }
+    }
+}
