@@ -1,0 +1,40 @@
+{
+    "version": "20220124",
+    "description": "High quality subtitle renderer with libass",
+    "homepage": "https://github.com/Masaiki/xy-VSFilter",
+    "license": {
+        "identifier": "GPL-2.0-only",
+        "url": "https://github.com/Masaiki/xy-VSFilter/blob/xysubfilter_libass/License.txt"
+    },
+    "notes": [
+        "Please do not move or delete this app manually!",
+        "If you want to reset the settings, you can just delete the item \"XySubFilter\" at \"HKCU\\Software\\Gabest\" in the registry."
+    ],
+    "depends": "sudo",
+    "url": "https://github.com/Masaiki/xy-VSFilter/releases/download/20220124/XySubFilter_with_libass_20220124.zip",
+    "hash": "FBA35EC9F2F0FA242CCAAE2099290328B3B9D6C7FBEBF852B85CDBEC9E39D41F",
+    "architecture": {
+        "64bit": {
+            "extract_dir": "x64"
+        },
+        "32bit": {
+            "extract_dir": "x86"
+        }
+    },
+    "pre_install": [
+        "Get-ChildItem -Path $dir -Filter *install*.bat | ForEach-Object {",
+        "    $content = (, \"@echo off\") + (Get-Content -Path $_).Replace(\"regsvr32.exe\", \"regsvr32.exe /s\")",
+        "    Set-Content -Path $_ -Value $content",
+        "}"
+    ],
+    "installer": {
+        "script": "sudo \"$dir\\Install_XySubFilter.bat\""
+    },
+    "uninstaller": {
+        "script": "sudo \"$dir\\Uninstall_XySubFilter.bat\""
+    },
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/Masaiki/xy-VSFilter/releases/download/$version/XySubFilter_with_libass_$version.zip"
+    }
+}
