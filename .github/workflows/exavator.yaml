@@ -1,0 +1,18 @@
+name: Excavator
+on:
+  workflow_dispatch:
+  schedule:
+    # run every 4 hours
+    - cron: '30 */4 * * *'
+jobs:
+  exavate:
+    name: Excavate
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@main
+      - name: Excavate
+        uses: ScoopInstaller/GithubActions@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USER_EMAIL: '57309261+zeemanz@users.noreply.github.com'
+          SKIP_UPDATED: '1'
