@@ -1,5 +1,5 @@
 {
-    "version": "20220124",
+    "version": "20220516",
     "description": "High quality subtitle renderer with libass",
     "homepage": "https://github.com/Masaiki/xy-VSFilter",
     "license": {
@@ -11,8 +11,8 @@
         "If you want to reset the settings, you can just delete the item \"XySubFilter\" at \"HKCU\\Software\\Gabest\" in the registry."
     ],
     "depends": "sudo",
-    "url": "https://github.com/Masaiki/xy-VSFilter/releases/download/20220124/XySubFilter_with_libass_20220124.zip",
-    "hash": "FBA35EC9F2F0FA242CCAAE2099290328B3B9D6C7FBEBF852B85CDBEC9E39D41F",
+    "url": "https://github.com/Masaiki/xy-VSFilter/releases/download/20220516/XySubFilter_with_libass_20220516.zip",
+    "hash": "6a29bd76de553adbfd53903f1b510dbb5af8aed71423f4906c5bb24c554bbb4a",
     "architecture": {
         "64bit": {
             "extract_dir": "x64"
