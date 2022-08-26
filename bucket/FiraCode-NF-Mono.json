@@ -1,5 +1,5 @@
 {
-    "version": "2.1.0",
+    "version": "2.2.0",
     "description": "A project that patches developer targeted fonts with a high number of glyphs (icons)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": {
@@ -10,8 +10,8 @@
         "If you are using Windows 11 Dev Channel and are not using the global installation option,",
         "please note that there is a bug will cause your computer unable to find these fonts after restart."
     ],
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip",
-    "hash": "21DE9AA0EDAA3FD2DC1D87FB9ECEC0B67C9B3B18BD1998A19904158067FEA7E7",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.0/FiraCode.zip",
+    "hash": "7ad2fdab3e95405b45644425d74238eb8463f2547ad6ff076bcc383ccba1c9c6",
     "installer": {
         "script": [
             "$currentBuildNumber = [Int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
