@@ -10,7 +10,7 @@
         "Please do not move or delete this app manually!",
         "If you want to reset the settings, you can just delete the item \"LAV\" at \"HKCU\\Software\" in the registry."
     ],
-    "depends": "sudo",
+    "depends": "gsudo",
     "architecture": {
         "64bit": {
             "url": "https://github.com/Nevcairiel/LAVFilters/releases/download/0.76.1/LAVFilters-0.76.1-x64.zip",
@@ -21,35 +21,11 @@
             "hash": "3973f6364c6b101353631025ed172dbaa28c2878c18fad45bcd98689aaf84594"
         }
     },
-    "pre_install": [
-        "Get-ChildItem -Path $dir -Filter *install_*.bat | ForEach-Object {",
-        "    $content = (Get-Content -Path $_).Replace(\"regsvr32.exe\", \"regsvr32.exe /s\")",
-        "    Set-Content -Path $_ -Value $content",
-        "}"
-    ],
     "installer": {
-        "script": [
-            "$installer = \"$dir\\installer.bat\"",
-            "$content = Get-ChildItem -Path $dir -Filter install_*.bat | ForEach-Object {",
-            "    \"call `\"$_`\"\"",
-            "}",
-            "$content = (, \"@echo off\") + $content",
-            "Set-Content -Path $installer -Value $content",
-            "sudo $installer",
-            "Remove-Item -Path $installer -Force -ErrorAction SilentlyContinue"
-        ]
+        "script": "sudo \"$env:COMSPEC\" /C \"regsvr32 /s `\"$dir\\LAVAudio.ax`\" & regsvr32 /s `\"$dir\\LAVSplitter.ax`\" & regsvr32 /s `\"$dir\\LAVVideo.ax`\"\""
     },
     "uninstaller": {
-        "script": [
-            "$uninstaller = \"$dir\\uninstaller.bat\"",
-            "$content = Get-ChildItem -Path $dir -Filter uninstall_*.bat | ForEach-Object {",
-            "    \"call `\"$_`\"\"",
-            "}",
-            "$content = (, \"@echo off\") + $content",
-            "Set-Content -Path $uninstaller -Value $content",
-            "sudo $uninstaller",
-            "Remove-Item -Path $uninstaller -Force -ErrorAction SilentlyContinue"
-        ]
+        "script": "sudo \"$env:COMSPEC\" /C \"regsvr32 /u /s `\"$dir\\LAVAudio.ax`\" & regsvr32 /u /s `\"$dir\\LAVSplitter.ax`\" & regsvr32 /u /s `\"$dir\\LAVVideo.ax`\"\""
     },
     "checkver": "github",
     "autoupdate": {
