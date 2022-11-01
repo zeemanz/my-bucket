@@ -4,13 +4,14 @@
     "homepage": "http://madvr.com",
     "license": "Freeware",
     "notes": "Please do not move or delete this app manually!",
-    "depends": "sudo",
     "url": "https://www.videohelp.com/download/madVR09217.zip",
     "hash": "87e088f7b5de20d0a9065c73015d7fb7c225870380dd3169c70171b77e74bb97",
+    "depends": "gsudo",
     "pre_install": [
         "if (-not (Test-Path \"$persist_dir\\settings.bin\")) {",
         "    New-Item -Path \"$dir\\settings.bin\" -ErrorAction SilentlyContinue | Out-Null",
         "}",
+        "",
         "Get-ChildItem -Path $dir -Filter *install*.bat | ForEach-Object {",
         "    $content = (Get-Content -Path $_).Replace(\"@pause >NUL\", \"\")",
         "    $content = $content -replace \"@echo.*\", \"\"",
@@ -24,12 +25,7 @@
     "uninstaller": {
         "script": "sudo \"$dir\\uninstall.bat\""
     },
-    "shortcuts": [
-        [
-            "madHcCtrl.exe",
-            "mad Home Cinema Control"
-        ]
-    ],
+    "shortcuts": [["madHcCtrl.exe", "mad Home Cinema Control"]],
     "persist": "settings.bin",
     "checkver": "latest release v([\\d.]+):",
     "autoupdate": {
