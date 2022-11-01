@@ -10,7 +10,7 @@
         "Please do not move or delete this app manually!",
         "If you want to reset the settings, you can just delete the item \"XySubFilter\" at \"HKCU\\Software\\Gabest\" in the registry."
     ],
-    "depends": "sudo",
+    "depends": "gsudo",
     "url": "https://github.com/Masaiki/xy-VSFilter/releases/download/20220831/XySubFilter_with_libass_20220831.zip",
     "hash": "caee9d529805eaa026a4a704954cc949da5087f965912a2352774dd94691e302",
     "architecture": {
@@ -18,20 +18,14 @@
             "extract_dir": "x64"
         },
         "32bit": {
-            "extract_dir": "x86"
+            "extract_dir": "Win32"
         }
     },
-    "pre_install": [
-        "Get-ChildItem -Path $dir -Filter *install*.bat | ForEach-Object {",
-        "    $content = (, \"@echo off\") + (Get-Content -Path $_).Replace(\"regsvr32.exe\", \"regsvr32.exe /s\")",
-        "    Set-Content -Path $_ -Value $content",
-        "}"
-    ],
     "installer": {
-        "script": "sudo \"$dir\\Install_XySubFilter.bat\""
+        "script": "sudo regsvr32 \"$dir\\XySubFilter.dll\""
     },
     "uninstaller": {
-        "script": "sudo \"$dir\\Uninstall_XySubFilter.bat\""
+        "script": "sudo regsvr32 /u \"$dir\\XySubFilter.dll\""
     },
     "checkver": "github",
     "autoupdate": {
