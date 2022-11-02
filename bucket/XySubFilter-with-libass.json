@@ -22,10 +22,10 @@
         }
     },
     "installer": {
-        "script": "sudo regsvr32 \"$dir\\XySubFilter.dll\""
+        "script": "sudo regsvr32 /s \"$dir\\XySubFilter.dll\""
     },
     "uninstaller": {
-        "script": "sudo regsvr32 /u \"$dir\\XySubFilter.dll\""
+        "script": "sudo regsvr32 /u /s \"$dir\\XySubFilter.dll\""
     },
     "checkver": "github",
     "autoupdate": {
