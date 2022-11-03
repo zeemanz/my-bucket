@@ -17,10 +17,11 @@
     },
     "env_add_path": "bin",
     "env_set": {
-        "JAVA_HOME": "$dir"
+        "JAVA_HOME": "$dir",
+        "JAVA_TOOL_OPTIONS": "-Dfile.encoding=UTF8"
     },
     "checkver": {
-        "url": "https://api.azul.com/zulu/download/community/v1.0/bundles/latest/?java_version=17&os=windows&arch=x86&ext=zip&bundle_type=jdk&javafx=false",
+        "url": "https://api.azul.com/zulu/download/community/v1.0/bundles/latest/?java_version=17&os=windows&arch=x86&hw_bitness=64&ext=zip&bundle_type=jdk&javafx=false",
         "jsonpath": "$.name",
         "regex": "(?<name>zulu(?<version>[\\d.]+).+)_",
         "replace": "${version}"
