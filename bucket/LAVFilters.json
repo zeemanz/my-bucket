@@ -22,10 +22,10 @@
         }
     },
     "installer": {
-        "script": "sudo \"$env:COMSPEC\" /C \"regsvr32 /s `\"$dir\\LAVAudio.ax`\" & regsvr32 /s `\"$dir\\LAVSplitter.ax`\" & regsvr32 /s `\"$dir\\LAVVideo.ax`\"\""
+        "script": "sudo \"$env:COMSPEC\" /c \"regsvr32 /s `\"$dir\\LAVAudio.ax`\" & regsvr32 /s `\"$dir\\LAVSplitter.ax`\" & regsvr32 /s `\"$dir\\LAVVideo.ax`\"\""
     },
     "uninstaller": {
-        "script": "sudo \"$env:COMSPEC\" /C \"regsvr32 /u /s `\"$dir\\LAVAudio.ax`\" & regsvr32 /u /s `\"$dir\\LAVSplitter.ax`\" & regsvr32 /u /s `\"$dir\\LAVVideo.ax`\"\""
+        "script": "sudo \"$env:COMSPEC\" /c \"regsvr32 /u /s `\"$dir\\LAVAudio.ax`\" & regsvr32 /u /s `\"$dir\\LAVSplitter.ax`\" & regsvr32 /u /s `\"$dir\\LAVVideo.ax`\"\""
     },
     "checkver": "github",
     "autoupdate": {
