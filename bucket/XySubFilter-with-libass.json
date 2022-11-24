@@ -10,7 +10,7 @@
         "Please do not move or delete this app manually!",
         "If you want to reset the settings, you can just delete the item \"XySubFilter\" at \"HKCU\\Software\\Gabest\" in the registry."
     ],
-    "depends": "gsudo",
+    "depends": "sudo",
     "url": "https://github.com/Masaiki/xy-VSFilter/releases/download/20220831/XySubFilter_with_libass_20220831.zip",
     "hash": "caee9d529805eaa026a4a704954cc949da5087f965912a2352774dd94691e302",
     "architecture": {

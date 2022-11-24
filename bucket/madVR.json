@@ -6,7 +6,7 @@
     "notes": "Please do not move or delete this app manually!",
     "url": "https://www.videohelp.com/download/madVR09217.zip",
     "hash": "87e088f7b5de20d0a9065c73015d7fb7c225870380dd3169c70171b77e74bb97",
-    "depends": "gsudo",
+    "depends": "sudo",
     "pre_install": [
         "if (-not (Test-Path \"$persist_dir\\settings.bin\")) {",
         "    New-Item -Path \"$dir\\settings.bin\" -ErrorAction SilentlyContinue | Out-Null",
