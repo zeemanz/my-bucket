@@ -1,6 +1,6 @@
 {
     "version": "20221208",
-    "description": "High quality subtitle renderer with libass",
+    "description": "A variant of XySubFilter with libass backend.",
     "homepage": "https://github.com/Masaiki/xy-VSFilter",
     "license": {
         "identifier": "GPL-2.0-only",
@@ -21,11 +21,17 @@
             "extract_dir": "Win32"
         }
     },
+    "pre_install": [
+        "if (-not $global) {",
+        "    Write-Host -Foreground Red \"$app should be installed globally.\"",
+        "    break",
+        "}"
+    ],
     "installer": {
-        "script": "sudo regsvr32 /s \"$dir\\XySubFilter.dll\""
+        "script": "regsvr32 /s \"$dir\\XySubFilter.dll\""
     },
     "uninstaller": {
-        "script": "sudo regsvr32 /u /s \"$dir\\XySubFilter.dll\""
+        "script": "regsvr32 /u /s \"$dir\\XySubFilter.dll\""
     },
     "checkver": "github",
     "autoupdate": {
