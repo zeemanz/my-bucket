@@ -20,7 +20,7 @@
         }
     },
     "bin": "fnm.exe",
-    "post_install": "Set-Content -Path $dir\\fnm-completions.ps1 -Value (fnm completions --shell powershell)",
+    "post_install": "Set-Content -Path $dir\\fnm-completions.ps1 -Value (fnm completions --shell power-shell)",
     "uninstaller": {
         "script": "Remove-Item -Path \"$env:LOCALAPPDATA\\fnm_multishells\" -Recurse -Force -ErrorAction SilentlyContinue"
     },
