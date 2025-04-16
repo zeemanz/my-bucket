@@ -1,18 +1,18 @@
 {
-    "version": "17.56.15",
+    "version": "17.58.21",
     "description": "A fully tested and TCK compliant builds of OpenJDK",
     "homepage": "https://www.azul.com/products/zulu-community",
     "license": "GPL-2.0-with-classpath-exception",
     "architecture": {
         "64bit": {
-            "url": "https://cdn.azul.com/zulu/bin/zulu17.56.15-ca-jdk17.0.14-win_x64.zip",
-            "hash": "11dbe0051cea65fbfc94e0074fbb26d81897f5aff2df69fed3784f380d0d9ec9",
-            "extract_dir": "zulu17.56.15-ca-jdk17.0.14-win_x64"
+            "url": "https://cdn.azul.com/zulu/bin/zulu17.58.21-ca-jdk17.0.15-win_x64.zip",
+            "hash": "b2c91dd8b125000f65177ea6967ef97059dbe31eebeb3ccaf6f8473d7dd7c48d",
+            "extract_dir": "zulu17.58.21-ca-jdk17.0.15-win_x64"
         },
         "32bit": {
-            "url": "https://cdn.azul.com/zulu/bin/zulu17.56.15-ca-jdk17.0.14-win_i686.zip",
-            "hash": "febb6a21cc6eac32eb7e33f3d14364a15b140cc4c3ceca5289936362d90fa6f0",
-            "extract_dir": "zulu17.56.15-ca-jdk17.0.14-win_i686"
+            "url": "https://cdn.azul.com/zulu/bin/zulu17.58.21-ca-jdk17.0.15-win_i686.zip",
+            "hash": "f1e71eef903126afff0e787548513f1bdccbb9f844790c2d399d3d3da36141dd",
+            "extract_dir": "zulu17.58.21-ca-jdk17.0.15-win_i686"
         }
     },
     "env_add_path": "bin",
