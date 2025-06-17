@@ -1,16 +1,16 @@
 {
-    "version": "2.32.0",
+    "version": "2.33.0",
     "description": "One for all free music in China",
     "homepage": "http://listen1.github.io/listen1",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/listen1/listen1_desktop/releases/download/v2.32.0/listen1_2.32.0_win_x64.7z",
-            "hash": "75f5cbbac886b346d6f0435664c3142545f3b68cf54f842e93fd98e787188a7f"
+            "url": "https://github.com/listen1/listen1_desktop/releases/download/v2.33.0/listen1_2.33.0_win_x64.7z",
+            "hash": "6ffd41f5f599494903f13d56b73c42e74acbad1a3be183a7b1e3ede114e8b9c0"
         },
         "32bit": {
-            "url": "https://github.com/listen1/listen1_desktop/releases/download/v2.32.0/listen1_2.32.0_win_ia32.7z",
-            "hash": "3edd3ee0b85e1d275ee1d2c189a45392789954e8a1eb4334fddbc4996b941b7f"
+            "url": "https://github.com/listen1/listen1_desktop/releases/download/v2.33.0/listen1_2.33.0_win_ia32.7z",
+            "hash": "e9fa3f8cc8f1e7b614614aae97c9532d160adac8ff18505c86e70b96d65b6f60"
         }
     },
     "post_install": "New-Item -ItemType Junction -Path $env:APPDATA\\listen1 -Target $persist_dir\\appdata -ErrorAction SilentlyContinue | Out-Null",
