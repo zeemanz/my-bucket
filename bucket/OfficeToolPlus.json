@@ -1,13 +1,13 @@
 {
-    "version": "10.28.29.0",
+    "version": "10.29.50.0",
     "description": "A simple tool for deploying Office",
     "homepage": "https://otp.landian.vip",
     "license": {
         "identifier": "GPL-3.0-only",
         "url": "https://github.com/YerongAI/Office-Tool/blob/main/LICENSE"
     },
-    "url": "https://github.com/YerongAI/Office-Tool/releases/download/v10.28.29.0/Office_Tool_with_runtime_v10.28.29.0.7z",
-    "hash": "11a2070518c436a82315e512ed454a700efe5fcfa98f96ab906164776c72c822",
+    "url": "https://github.com/YerongAI/Office-Tool/releases/download/v10.29.50.0/Office_Tool_with_runtime_v10.29.50.0.7z",
+    "hash": "f7fc0af1e5b093dd27c5e46deb05e3f012cbe18496b64179833a558b88395ed7",
     "extract_dir": "Office Tool",
     "pre_install": "New-Item $dir\\Office -ItemType Directory -ErrorAction SilentlyContinue | Out-Null",
     "shortcuts": [
