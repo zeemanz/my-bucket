@@ -1,13 +1,13 @@
 {
-    "version": "0.9.8",
+    "version": "0.9.9",
     "description": "A smarter cd command inspired by z and autojump",
     "homepage": "https://github.com/ajeetdsouza/zoxide",
     "license": "MIT",
     "notes": "See https://github.com/ajeetdsouza/zoxide for zoxide autoload.",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ajeetdsouza/zoxide/releases/download/v0.9.8/zoxide-0.9.8-x86_64-pc-windows-msvc.zip",
-            "hash": "15dbd23ae3d98e2a745d0e8e3f0292402f0a2269b47519b81a6e994baca5db2b"
+            "url": "https://github.com/ajeetdsouza/zoxide/releases/download/v0.9.9/zoxide-0.9.9-x86_64-pc-windows-msvc.zip",
+            "hash": "5af00d0916f05631e3030537289eac56605e7c1733318c4d525c8e847f12496d"
         }
     },
     "bin": "zoxide.exe",
